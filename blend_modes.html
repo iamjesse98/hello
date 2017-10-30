@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blend Modes</title>
+    <style>
+    @import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 7rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+.img-wrap {
+    width: 48%;
+    padding: 1%;
+    float: left;
+}
+
+.original {
+  background-image: url("http://abbeyjfitzgerald.com/wp-content/uploads/2017/01/blend-mode-original.jpg");
+ background-size: cover;
+  min-height: 500px;
+}
+
+.simple-blended {
+  background-image: url("http://abbeyjfitzgerald.com/wp-content/uploads/2017/01/blend-mode-original.jpg");
+  background-color: red;
+  background-blend-mode: multiply;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.comparison-blended {
+  background-image: url("http://abbeyjfitzgerald.com/wp-content/uploads/2017/01/blend-mode-comparison.jpg");
+  background-color: #2cdfff;
+  background-size: cover;
+  min-height: 450px;
+}
+
+.comparison-blended.second-img {
+  background-image: url("http://abbeyjfitzgerald.com/wp-content/uploads/2017/01/blend-mode-original.jpg");
+}
+
+.normal {
+  background-blend-mode: normal;
+}
+
+.two-image-stacked {
+ background-image: url("http://abbeyjfitzgerald.com/wp-content/uploads/2017/01/blend-mode-original.jpg"), url("http://abbeyjfitzgerald.com/wp-content/uploads/2017/01/blend-mode-comparison.jpg");
+  background-color: purple;
+  background-blend-mode: lighten;
+  background-size: cover;
+  min-height: 450px;
+}
+
+.opacity-effect {
+  opacity: 0.5;
+}
+
+.no-background-color {
+  background-color: transparent;
+}
+
+.multiply {
+  background-blend-mode: multiply;
+}
+
+.screen {
+  background-blend-mode: screen;
+}
+
+.overlay {
+  background-blend-mode: overlay;
+}
+
+.darken {
+  background-blend-mode: darken;
+}
+
+.lighten {
+  background-blend-mode: lighten;
+}
+
+.color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.color-burn {
+  background-blend-mode: color-burn;
+}
+
+.hard-light {
+  background-blend-mode: hard-light;
+}
+
+.soft-light {
+  background-blend-mode: soft-light;
+}
+
+.difference {
+  background-blend-mode: difference;
+}
+
+.exclusion {
+  background-blend-mode: exclusion;
+}
+
+.hue {
+  background-blend-mode: hue;
+}
+
+.saturation {
+  background-blend-mode: saturation;
+}
+
+.color {
+  background-blend-mode: color;
+}
+
+.luminosity {
+  background-blend-mode: luminosity;
+}
+
+.gradient-on-image {
+  background: 
+    linear-gradient(purple 0%, red 80%), 
+    linear-gradient(to right, purple 0%, yellow 100%), 
+    url("http://abbeyjfitzgerald.com/wp-content/uploads/2017/01/blend-mode-comparison.jpg");
+  background-blend-mode: screen, difference, lighten;
+  background-size: cover;
+  min-height: 450px;
+}
+
+
+    </style>
+</head>
+<body>
+    
+<div class="img-wrap">
+
+    <div class="original">
+        <h2>Original image</h2>
+    </div>
+
+</div>
+<!-- /original -->
+
+<div class="img-wrap">
+
+    <div class="simple-blended">
+        <h2>Simple blend mode - multiply</h2>
+
+    </div>
+
+</div>
+<!-- /simple example -->
+
+<h3>Background Blend Modes Compared</h3>
+
+<hr />
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended normal">
+
+    </div>
+    <h2>Normal</h2>
+
+</div>
+<!-- /normal -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended second-img normal">
+
+    </div>
+    <h2>Normal</h2>
+
+</div>
+<!-- /normal two -->
+
+<div class="img-wrap">
+
+    <div class="two-image-stacked">
+
+    </div>
+    <p>This has a background-color of purple.</p>
+    <h2>Two image blends</h2>
+
+</div>
+<!-- /two image  -->
+
+<div class="img-wrap">
+
+    <div class="two-image-stacked no-background-color">
+
+    </div>
+    <p>This does not have a background-color declared.</p>
+    <h2>Two image blends</h2>
+
+</div>
+<!-- /two image no color -->
+
+<div class="img-wrap">
+
+    <div class="comparison-blended multiply">
+
+    </div>
+    <h2>Multiply</h2>
+
+</div>
+<!-- /multiply -->
+
+<div class="img-wrap">
+
+    <div class="comparison-blended multiply opacity-effect">
+
+    </div>
+    <h2>Multiply with opacity</h2>
+
+</div>
+<!-- /multiply opacity -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended screen">
+
+    </div>
+    <h2>Screen</h2>
+
+</div>
+<!-- /screen -->
+
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended overlay">
+
+    </div>
+    <h2>Overlay</h2>
+
+</div>
+<!-- /overlay -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended darken">
+
+    </div>
+    <h2>Darken</h2>
+
+</div>
+<!-- /darken -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended lighten">
+
+    </div>
+    <h2>Lighten</h2>
+
+</div>
+<!-- /lighten -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended color-dodge">
+
+    </div>
+    <h2>Color-dodge</h2>
+
+</div>
+<!-- /color-dodge -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended color-burn">
+
+    </div>
+    <h2>Color-burn</h2>
+
+</div>
+<!-- /color-burn -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended hard-light">
+
+    </div>
+    <h2>Hard-light</h2>
+
+</div>
+<!-- /hard-light -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended soft-light">
+
+    </div>
+    <h2>Soft-light</h2>
+
+</div>
+<!-- /soft-light -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended difference">
+
+    </div>
+    <h2>Difference</h2>
+
+</div>
+<!-- /difference -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended exclusion">
+
+    </div>
+    <h2>Exclusion</h2>
+
+</div>
+<!-- /exclusion -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended hue">
+
+    </div>
+    <h2>Hue</h2>
+
+</div>
+<!-- /hue -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended saturation">
+
+    </div>
+    <h2>Saturation</h2>
+
+</div>
+<!-- /saturation -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended color">
+
+    </div>
+    <h2>Color</h2>
+
+</div>
+<!-- /color -->
+
+<div class="img-wrap">
+
+
+    <div class="comparison-blended luminosity">
+
+    </div>
+    <h2>Luminosity</h2>
+
+</div>
+<!-- /luminosity -->
+
+<div class="img-wrap">
+
+
+    <div class="gradient-on-image">
+
+    </div>
+    <h2>Gradient on image</h2>
+
+</div>
+<!-- /gradient on image -->
+
+
+</body>
+</html>

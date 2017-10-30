@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>web dev session</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+		.simple-blended {
+			background-image: url('images/image.jpg');
+			background-color: red;
+			background-blend-mode: multiply;
+			background-size: cover;
+			width: 1050px;
+			height: 650px;
+		}
+		.two-image-stacked {
+			background-image: url("images/image.jpg"), url("images/image-2.jpg");
+			background-color: purple; 
+			background-blend-mode: lighten;
+			background-size: cover;
+			width: 1050px;
+			height: 650px;
+		}
+		.gradient-on-image {
+			background: linear-gradient(purple 0%, red 80%), linear-gradient(to right, purple 0%, yellow 100%), url("images/image.jpg");
+			background-blend-mode: screen, difference, lighten;
+			background-size: cover;
+			width: 1050px;
+			height: 650px;
+		}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Web Development</h2>
+					<h5>By Yadagalla Jaswanth Kumar</h5>
+					<a href="#">iamjesse98(github)</a>
+				</section>
+				<section>
+					<h4>My Demos</h4>
+				</section>
+				<section>
+					<section><h2>Image Processing with CSS</h2></section>
+					<section>
+						<p>Basic Blending</p>
+						<pre><code class="hljs">.simple-blended {
+	background-image: url(image.jpg);
+	background-color: red;
+	background-blend-mode: multiply;
+}</code></pre>
+					</section>
+					<section>
+						<div class="simple-blended"></div>
+					</section>
+					<section>
+						<p>Blending Two Images</p>
+						<pre><code class="hljs">.two-image-stacked {
+	background-image: url("image.jpg"), url("image-2.jpg");
+	background-color: purple;
+	background-blend-mode: lighten;
+}
+					</code></pre>
+					</section>
+					<section>
+						<div class="two-image-stacked"></div>
+					</section>
+					<section>
+						<p>Gradient On Image</p>
+						<pre><code class="hljs">.gradient-on-image {
+	background: linear-gradient(purple 0%, red 80%),
+		linear-gradient(to right, purple 0%, yellow 100%),
+		url("image.jpg");
+	background-blend-mode: screen, difference, lighten;
+}</code></pre>
+					</section>
+					<section>
+						<div class="gradient-on-image"></div>
+					</section>
+					<section>
+						<ul>
+							<li>Initial: Default setting of the property that does not set a blend mode.</li>
+							<li>Inherit: Inherits the blend mode from its parent element.</li>
+							<li>Unset: Removes the blend mode from an element.</li>
+						</ul>
+					</section>
+
+				</section>
+				<section>
+					 <section><h3>Translucent-borders</h3></section>
+				<section>
+					<pre><code class="hljs">/** Translucent borders */
+body {
+	background: url('http://csssecrets.io/images/stone-art.jpg');
+}
+div {
+	border: 10px solid hsla(0, 0%, 100%, .5);
+	background: white;
+	background-clip: padding-box;
+	/* styling */
+	max-width: 20em;
+	padding: 2em;
+	margin: 2em auto 0;
+	font: 100%/1.5 sans-serif;
+}</code></pre>
+				</section>
+				<section style="background: url('http://csssecrets.io/images/stone-art.jpg');">
+						<div style="border: 10px solid hsla(0, 0%, 100%, .5);background: white;color: indianred;background-clip: padding-box;width: 50%;padding: 2em;margin: 2em auto 0;font: 100%/1.5 sans-serif;">
+							Hello World!!!
+						</div>
+				</section>
+				</section>
+
+<section>
+	<section>
+		<h3>Multiple-borders</h3>
+	</section>
+	<section>
+		<pre><code class="hljs">/** Multiple borders */
+div {
+	width: 100px;
+	height: 60px;
+	margin: 25px;
+	background: yellowgreen;
+	box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0,0,0,.6);
+}</code></pre>
+	</section>
+	<section style="background: orangered; padding-left: 30%;width: 600px;">
+		<div style="padding-top: 2%;font-size: 20px;width: 300px;height: 100px;margin: 25px;background: yellowgreen;box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0,0,0,.6);">
+			Hello World!!!
+		</div>
+	</section>
+</section>
+
+<section>
+	<p><span style="color: dodgerblue;">console</span>.<span style="color: tomato;">log</span>(<span style="color: yellowgreen;">'Thank you'</span>)</p>
+	<p>jaswanthkumar.y16@iiits.in</p>
+</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
